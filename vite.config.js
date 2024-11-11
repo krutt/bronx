@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      input: './pages/main.jsx',
+      input: './src/main.jsx',
       output: {
         assetFileNames: 'dist.[ext]',
         entryFileNames: 'dist.js'
