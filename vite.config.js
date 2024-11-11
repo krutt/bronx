@@ -6,13 +6,4 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  build: {
-    rollupOptions: {
-      input: './src/main.jsx',
-      output: {
-        assetFileNames: 'dist.[ext]',
-        entryFileNames: 'dist.js'
-      },
-    },
-  },
 })
