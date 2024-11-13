@@ -5,7 +5,11 @@ import "@radix-ui/themes/styles.css";
 // import "./index.css";
 
 /* SUI dApp Components */
-import { SuiClientProvider, WalletProvider } from "@mysten/dapp-kit";
+import {
+  SuiClientProvider,
+  WalletProvider,
+} from "@mysten/dapp-kit";
+import { darkTheme } from "./components/Theme/DarkTheme.tsx";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Theme } from "@radix-ui/themes";
 import App from "./App.tsx";
@@ -15,10 +19,10 @@ const queryClient = new QueryClient();
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <Theme>
+    <Theme appearance="dark">
       <QueryClientProvider client={queryClient}>
         <SuiClientProvider networks={networkConfig} defaultNetwork="devnet">
-          <WalletProvider>
+          <WalletProvider theme={darkTheme}>
             <App />
           </WalletProvider>
         </SuiClientProvider>

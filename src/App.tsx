@@ -1,14 +1,8 @@
-// import { ConnectButton } from "@mysten/dapp-kit";
-// import { Box, Container, Flex, Heading } from "@radix-ui/themes";
-// import { WalletStatus } from "./components/WalletStatus.tsx";
-import { Layout } from "./components/Layout/Layout.tsx";
+import { RouterProvider } from "react-router-dom";
+import { routers } from "./routes";
 
 function App() {
-  return (
-    <>
-      <Layout />
-    </>
-  );
+  return <RouterProvider router={routers} />;
 }
 
 export default App;
