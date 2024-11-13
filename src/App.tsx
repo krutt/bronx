@@ -1,15 +1,12 @@
-import { ConnectButton } from "@mysten/dapp-kit";
-import "./App.css";
+// import { ConnectButton } from "@mysten/dapp-kit";
+// import { Box, Container, Flex, Heading } from "@radix-ui/themes";
+// import { WalletStatus } from "./components/WalletStatus.tsx";
+import { Layout } from "./components/Layout/Layout.tsx";
 
 function App() {
   return (
     <>
-      <div>
-        <nav>
-          <ConnectButton />
-        </nav>
-        <section>Hello, world</section>
-      </div>
+      <Layout />
     </>
   );
 }

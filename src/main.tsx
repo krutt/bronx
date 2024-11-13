@@ -1,33 +1,28 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./index.css";
 import "@mysten/dapp-kit/dist/index.css";
-import App from "./App.tsx";
-/* SUI dApp Components */
-import {
-  createNetworkConfig,
-  SuiClientProvider,
-  WalletProvider,
-} from "@mysten/dapp-kit";
-import { getFullnodeUrl } from "@mysten/sui/client";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import "@radix-ui/themes/styles.css";
+// import "./index.css";
 
-const { networkConfig } = createNetworkConfig({
-  localnet: { url: getFullnodeUrl("localnet") },
-  devnet: { url: getFullnodeUrl("devnet") },
-  testnet: { url: getFullnodeUrl("testnet") },
-  mainnet: { url: getFullnodeUrl("mainnet") },
-});
+/* SUI dApp Components */
+import { SuiClientProvider, WalletProvider } from "@mysten/dapp-kit";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Theme } from "@radix-ui/themes";
+import App from "./App.tsx";
+import { networkConfig } from "./utils/networkConfig.ts";
+
 const queryClient = new QueryClient();
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
+    <Theme>
       <QueryClientProvider client={queryClient}>
-        <SuiClientProvider networks={networkConfig} defaultNetwork="localnet">
+        <SuiClientProvider networks={networkConfig} defaultNetwork="devnet">
           <WalletProvider>
             <App />
           </WalletProvider>
         </SuiClientProvider>
       </QueryClientProvider>
+    </Theme>
   </StrictMode>
 );
