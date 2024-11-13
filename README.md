@@ -1,8 +1,11 @@
 # Bronx
 
-## Atomic Swap interface between Bitcoin Decentralized Network & Sui Resource-Oriented Architecture
+[![Top](https://img.shields.io/github/languages/top/krutt/bronx)](https://github.com/krutt/bronx)
+[![Languages](https://img.shields.io/github/languages/count/krutt/bronx)](https://github.com/krutt/bronx)
+[![Size](https://img.shields.io/github/repo-size/krutt/bronx)](https://github.com/krutt/bronx)
+[![Last commit](https://img.shields.io/github/last-commit/krutt/bronx/master)](https://github.com/krutt/bronx)
 
-![](public/banner.svg)
+![Bronx Banner](public/bronx-banner.svg)
 
 ## User Journey
 
