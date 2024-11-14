@@ -52,7 +52,7 @@
   "scripts": {
     "dev": "vite",
     "fmt": "prettier --write src && prettier --write vite.config.ts",
-    "build": "tsc -b && vite build --base=/",
+    "build": "tsc -b && vite build --base=/bronx/",
     "preview": "vite preview",
     "lint": "eslint ."
   },
