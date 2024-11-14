@@ -35,9 +35,24 @@
   "name": "bronx-frontend",
   "version": "0.0.1",
   "main": "src/main.js",
+  "prettier": {
+    "arrowParens": "avoid",
+    "bracketSpacing": true,
+    "endOfLine": "lf",
+    "printWidth": 100,
+    "proseWrap": "preserve",
+    "quoteProps": "as-needed",
+    "requirePragma": false,
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "useTabs": false,
+    "vueIndentScriptAndStyle": false
+  },
   "scripts": {
     "dev": "vite",
-    "fmt": "prettier --write src && prettier --write vite.config.js",
+    "fmt": "prettier --write src && prettier --write vite.config.ts",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "lint": "eslint ."

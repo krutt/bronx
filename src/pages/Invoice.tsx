@@ -1,4 +1,4 @@
-import { Box, Text, Flex, Card, Avatar } from "@radix-ui/themes";
+import { Box, Text, Flex, Card, Avatar } from '@radix-ui/themes'
 
 export const Invoice = () => (
   <Box maxWidth="240px">
@@ -21,4 +21,4 @@ export const Invoice = () => (
       </Flex>
     </Card>
   </Box>
-);
+)

@@ -1,6 +1,6 @@
 /* @import "tailwindcss/base"; */
-@import "@mysten/dapp-kit/dist/index.css";
-@import "@radix-ui/themes/styles.css";
+@import '@mysten/dapp-kit/dist/index.css';
+@import '@radix-ui/themes/styles.css';
 
 @tailwind base;
 @tailwind components;
@@ -31,8 +31,7 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 .spinning {

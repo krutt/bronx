@@ -1,9 +1,9 @@
-import { useCurrentAccount } from "@mysten/dapp-kit";
-import { Flex, Heading, Text } from "@radix-ui/themes";
-import { OwnedObjects } from "./OwnedObjects";
+import { useCurrentAccount } from '@mysten/dapp-kit'
+import { Flex, Heading, Text } from '@radix-ui/themes'
+import { OwnedObjects } from './OwnedObjects'
 
 export const WalletStatus = () => {
-  const account = useCurrentAccount();
+  const account = useCurrentAccount()
 
   return (
     <>
@@ -19,5 +19,5 @@ export const WalletStatus = () => {
       )}
       <OwnedObjects />
     </>
-  );
-};
+  )
+}

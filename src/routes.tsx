@@ -1,26 +1,26 @@
-import { createBrowserRouter } from "react-router-dom";
-import { Layout } from "./components/Layout";
-import { Transaction } from "./pages/Transaction";
-import { Swap } from "./pages/Swap";
-import { Invoice } from "./pages/Invoice";
+import { createBrowserRouter } from 'react-router-dom'
+import { Layout } from './components/Layout'
+import { Transaction } from './pages/Transaction'
+import { Swap } from './pages/Swap'
+import { Invoice } from './pages/Invoice'
 
 export const routers = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Layout />,
     children: [
       {
-        path: "/",
+        path: '/',
         element: <Swap />,
       },
       {
-        path: "/transaction",
+        path: '/transaction',
         element: <Transaction />,
       },
       {
-        path: "/invoice",
+        path: '/invoice',
         element: <Invoice />,
       },
     ],
   },
-]);
+])

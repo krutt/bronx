@@ -1,18 +1,18 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import "./index.css";
-import { darkTheme } from "./components/themes";
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import { darkTheme } from './components/themes'
 
 /* SUI dApp Components */
-import { SuiClientProvider, WalletProvider } from "@mysten/dapp-kit";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { Theme } from "@radix-ui/themes";
-import App from "./App.tsx";
-import { networkConfig } from "./utils/networkConfig";
+import { SuiClientProvider, WalletProvider } from '@mysten/dapp-kit'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { Theme } from '@radix-ui/themes'
+import App from './App.tsx'
+import { networkConfig } from './utils/networkConfig'
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient()
 
-createRoot(document.getElementById("root")!).render(
+createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Theme
       appearance="dark"
@@ -31,4 +31,4 @@ createRoot(document.getElementById("root")!).render(
       </QueryClientProvider>
     </Theme>
   </StrictMode>
-);
+)

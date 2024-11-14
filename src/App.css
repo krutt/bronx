@@ -1,10 +1,5 @@
 :root {
-  --radix-background-gradient: linear-gradient(
-    135deg,
-    #000000,
-    #0000ff,
-    #800080
-  );
+  --radix-background-gradient: linear-gradient(135deg, #000000, #0000ff, #800080);
 }
 
 body {
