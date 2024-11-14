@@ -1,19 +1,14 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "@mysten/dapp-kit/dist/index.css";
-import "@radix-ui/themes/styles.css";
-// import "./index.css";
+import "./index.css";
+import { darkTheme } from "./components/themes";
 
 /* SUI dApp Components */
-import {
-  SuiClientProvider,
-  WalletProvider,
-} from "@mysten/dapp-kit";
-import { darkTheme } from "./components/Theme/DarkTheme.tsx";
+import { SuiClientProvider, WalletProvider } from "@mysten/dapp-kit";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Theme } from "@radix-ui/themes";
 import App from "./App.tsx";
-import { networkConfig } from "./utils/networkConfig.ts";
+import { networkConfig } from "./utils/networkConfig";
 
 const queryClient = new QueryClient();
 
