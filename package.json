@@ -34,7 +34,6 @@
   "license": "MIT",
   "name": "bronx-frontend",
   "version": "0.0.1",
-  "main": "src/main.js",
   "prettier": {
     "arrowParens": "avoid",
     "bracketSpacing": true,

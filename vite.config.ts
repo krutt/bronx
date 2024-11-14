@@ -7,7 +7,7 @@ import tailwindcss from 'tailwindcss'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/',
+  base: '/bronx/',
   css: {
     postcss: {
       plugins: [autoprefixer(), tailwindcss()],
