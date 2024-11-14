@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import Menu from "./Menu";
-import styles from "./header.module.css";
+// import styles from "./Header.module.css";
 import { Logo } from "./Logo";
 
 type Props = {
