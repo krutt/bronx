@@ -1,62 +1,63 @@
-import { useCurrentAccount, ConnectButton } from "@mysten/dapp-kit";
-import { Box, Card, TextField, Flex, Select } from "@radix-ui/themes";
-import { Container } from "../components/elements/Container";
-import { useState } from "react";
-import BitcoinLogo from "./../assets/bitcoin-btc-logo.svg";
-import LNBitcoinLogo from "./../assets/icon_lightning.svg";
-import SuiLogo from "./../assets/sui-sui-logo.svg";
-import SolLogo from "./../assets/solana-sol-logo.svg";
-import { UpdateIcon } from "@radix-ui/react-icons";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { useCurrentAccount, ConnectButton } from '@mysten/dapp-kit'
+import { Box, Card, TextField, Flex, Select } from '@radix-ui/themes'
+import { Container } from '../components/elements/Container'
+import { useState } from 'react'
+import BitcoinLogo from './../assets/bitcoin-btc-logo.svg'
+import LNBitcoinLogo from './../assets/icon_lightning.svg'
+import SuiLogo from './../assets/sui-sui-logo.svg'
+import SolLogo from './../assets/solana-sol-logo.svg'
+import { UpdateIcon } from '@radix-ui/react-icons'
 
 interface CryptoAsset {
-  label: string;
-  icon: JSX.Element;
+  label: string
+  icon: JSX.Element
 }
 
 interface CryptoData {
-  [key: string]: CryptoAsset;
+  [key: string]: CryptoAsset
 }
 
 const sourceData: CryptoData = {
   btc: {
-    label: "BTC",
+    label: 'BTC',
     icon: <img src={BitcoinLogo} alt="BTC" className="w-5 h-5" />,
   },
   ln_btc: {
-    label: "LN-BTC",
+    label: 'LN-BTC',
     icon: <img src={LNBitcoinLogo} alt="LN-BTC" className="w-6 h-6" />,
   },
-};
+}
 
 const targetData: CryptoData = {
   sui: {
-    label: "SUI",
+    label: 'SUI',
     icon: <img src={SuiLogo} alt="SUI" className="w-5 h-5" />,
   },
   sol: {
-    label: "SOL",
+    label: 'SOL',
     icon: <img src={SolLogo} alt="SOL" className="w-6 h-6" />,
   },
-};
+}
 
-type SourceCurrency = keyof typeof sourceData;
-type TargetCurrency = keyof typeof targetData;
+type SourceCurrency = keyof typeof sourceData
+type TargetCurrency = keyof typeof targetData
 
 export const Swap = () => {
-  const account = useCurrentAccount();
-  const [targetValue, setTargetValue] = useState<TargetCurrency>("sui");
-  const [sourceValue, setSourceValue] = useState<SourceCurrency>("btc");
+  const account = useCurrentAccount()
+  const [targetValue, setTargetValue] = useState<TargetCurrency>('sui')
+  const [sourceValue, setSourceValue] = useState<SourceCurrency>('btc')
 
   // Mock balances - replace with actual balance fetching logic
-  const balances = {
-    btc: "1.245",
-    ln_btc: "0.5",
-    sui: "1000",
-    sol: "25.5",
-  };
+  const balances: any = {
+    btc: '1.245',
+    ln_btc: '0.5',
+    sui: '1000',
+    sol: '25.5',
+  }
 
   const renderWalletInfo = () => {
-    if (!account) return null;
+    if (!account) return null
 
     return (
       <div className="mb-6">
@@ -70,8 +71,8 @@ export const Swap = () => {
           {account.address.slice(0, 6)}...{account.address.slice(-4)}
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const renderAmountInput = () => (
     <Box className="w-7/12">
@@ -81,10 +82,10 @@ export const Swap = () => {
         className="h-14 bg-transparent focus:ring-0 border-none text-lg"
       />
     </Box>
-  );
+  )
 
   const renderCurrencySelect = (
-    value: string,
+    value: any,
     onChange: (value: string) => void,
     data: CryptoData,
     options: { value: string; label: string }[]
@@ -94,16 +95,14 @@ export const Swap = () => {
         <Select.Trigger className="w-full h-14 bg-white/5 border-none focus:ring-0 hover:bg-white/10 transition-colors">
           <Flex align="center" gap="2" className="px-3">
             {data[value].icon}
-            <span className="font-medium text-lg min-w-[80px]">
-              {data[value].label}
-            </span>
+            <span className="font-medium text-lg min-w-[80px]">{data[value].label}</span>
           </Flex>
         </Select.Trigger>
         <Select.Content
           position="popper"
           className="bg-slate-800/90 backdrop-blur-md min-w-[140px]"
         >
-          {options.map((option) => (
+          {options.map(option => (
             <Select.Item
               key={option.value}
               value={option.value}
@@ -118,7 +117,7 @@ export const Swap = () => {
         </Select.Content>
       </Select.Root>
     </Box>
-  );
+  )
 
   const renderWalletBackdrop = () => (
     <div className="absolute inset-0 bg-black/20 backdrop-blur-md rounded-xl flex items-center justify-center">
@@ -134,17 +133,17 @@ export const Swap = () => {
         </div>
       </div>
     </div>
-  );
+  )
 
   const sourceOptions = [
-    { value: "btc", label: "BTC" },
-    { value: "ln_btc", label: "LN-BTC" },
-  ];
+    { value: 'btc', label: 'BTC' },
+    { value: 'ln_btc', label: 'LN-BTC' },
+  ]
 
   const targetOptions = [
-    { value: "sui", label: "SUI" },
-    { value: "sol", label: "SOL" },
-  ];
+    { value: 'sui', label: 'SUI' },
+    { value: 'sol', label: 'SOL' },
+  ]
 
   return (
     <Container data-testid="swap-page" maxWidth="1" className="min-h-screen">
@@ -162,12 +161,7 @@ export const Swap = () => {
                   <div className="rounded-xl bg-black/20 p-4 backdrop-blur-md">
                     <Flex gap="3" justify="between">
                       {renderAmountInput()}
-                      {renderCurrencySelect(
-                        sourceValue,
-                        setSourceValue,
-                        sourceData,
-                        sourceOptions
-                      )}
+                      {renderCurrencySelect(sourceValue, setSourceValue, sourceData, sourceOptions)}
                     </Flex>
                   </div>
                 </div>
@@ -183,12 +177,7 @@ export const Swap = () => {
                   <div className="rounded-xl bg-black/20 p-4 backdrop-blur-md">
                     <Flex gap="3" justify="between">
                       {renderAmountInput()}
-                      {renderCurrencySelect(
-                        targetValue,
-                        setTargetValue,
-                        targetData,
-                        targetOptions
-                      )}
+                      {renderCurrencySelect(targetValue, setTargetValue, targetData, targetOptions)}
                     </Flex>
                   </div>
                 </div>

@@ -1,9 +1,9 @@
-import { Box, Text, Flex, Card, Avatar } from '@radix-ui/themes'
+import { Container } from '@radix-ui/themes'
 
-export const Transaction = () => (
-  <Box maxWidth="240px">
-    <Card>
-     
-    </Card>
-  </Box>
-)
+export const Transaction = () => {
+  return (
+    <Container data-testid="transaction-page" maxWidth="1" className="min-h-screen">
+      <div className="max-w-screen-xl mx-auto px-4"></div>
+    </Container>
+  )
+}
