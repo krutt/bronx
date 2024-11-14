@@ -1,0 +1,8 @@
+@import "tailwindcss/base";
+@import "@mysten/dapp-kit/dist/index.css";
+@import "@radix-ui/themes/styles.css";
+
+@tailwind components;
+@tailwind utilities;
+
+
