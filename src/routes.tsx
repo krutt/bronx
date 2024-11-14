@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Layout } from "./components/layout";
+import { Layout } from "./components/Layout";
 import { Transaction } from "./pages/Transaction";
 import { Swap } from "./pages/Swap";
 import { Invoice } from "./pages/Invoice";
