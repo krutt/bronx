@@ -14,7 +14,14 @@ const queryClient = new QueryClient();
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <Theme appearance="dark">
+    <Theme
+      appearance="dark"
+      accentColor="indigo"
+      grayColor="gray"
+      panelBackground="solid"
+      scaling="100%"
+      radius="full"
+    >
       <QueryClientProvider client={queryClient}>
         <SuiClientProvider networks={networkConfig} defaultNetwork="devnet">
           <WalletProvider theme={darkTheme}>
