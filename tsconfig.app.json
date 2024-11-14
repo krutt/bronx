@@ -19,7 +19,7 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
     "forceConsistentCasingInFileNames": false,
-    "types": ["vite/client"]
+    "types": ["./src/vite-env.d.ts", "vite/client"]
   },
   "include": ["src"]
 }
