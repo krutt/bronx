@@ -8,7 +8,6 @@ export const WalletStatus = () => {
   return (
     <>
       <Heading mb="2">Wallet Status</Heading>
-
       {account ? (
         <Flex direction="column">
           <Text>Wallet connected</Text>

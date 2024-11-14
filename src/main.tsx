@@ -20,7 +20,6 @@ createRoot(document.getElementById('root')!).render(
       grayColor="gray"
       panelBackground="solid"
       scaling="100%"
-      radius="full"
     >
       <QueryClientProvider client={queryClient}>
         <SuiClientProvider networks={networkConfig} defaultNetwork="devnet">
